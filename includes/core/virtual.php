@@ -44,6 +44,7 @@ $arrVar['txtBaseURL'] = implode('/',$arrTemp);
 if (substr($arrVar['txtBaseURL'],-1) != '/')
     $arrVar['txtBaseURL'] .= '/';
 
+$arrVar['txtBaseSiteURL'] = 'http://'.$_SERVER['HTTP_HOST'];
 $arrVar['txtBaseCSSURL'] = $arrVar['txtBaseURL'] . 'css' . strDirSep;
 $arrVar['txtBaseImageURL'] = $arrVar['txtBaseURL'] . 'images' . strDirSep;
 $arrVar['txtBaseURLSite'] = $arrVar['txtBaseURL'] . strDirSep . 'site' . strDirSep;

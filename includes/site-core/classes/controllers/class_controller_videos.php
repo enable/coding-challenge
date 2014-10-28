@@ -6,14 +6,37 @@
  * Time: 16:48
  */
 
+/**
+ * Class clsSiteController_videos
+ *
+ * All Controller Logic Relating to Videos needs
+ * to live in this class.
+ */
 class clsSiteController_videos extends clsController
 {
 
+    /**
+     * Fetches a list of Videos
+     *
+     * @return string
+     */
     function funPageProcessing_videos_index()
     {
         global $arrVar;
 
-        $arrVideos = $arrVar['objDb']->funCoreFetch("fetchVideos","siteVideo");
+        $arrTable = array(
+            "siteVideo",'siteVideo_lang',
+            array('left'=>
+                array('siteVideo_lang' => array(
+                    array('siteVideo_lang' => 'VideoID', 'siteVideo' => 'VideoID')))
+            )
+        );
+
+        $arrFields = array("Title","Speaker","PublicationDate");
+        $arrWhere = array();
+        $arrOrder = array();
+
+        $arrVideos = $arrVar['objDb']->funCoreFetch("fetchVideos",$arrTable,$arrFields,$arrWhere,$arrOrder);
 
         ob_start();
         require($this->funSelectDisplay('videos/index.php'));
@@ -23,4 +46,7 @@ class clsSiteController_videos extends clsController
         return $txtDisplay;
     }
 
+    /**
+     * @TODO: Add your Video Gallery function here...
+     */
 } 

@@ -10,12 +10,6 @@ class clsSiteController extends clsController
      * This method calls the parent, and if a PageProcessing method isn't found
      * we'll attempt to load it in from an external class.
      *
-     * When we inherited this project at G+V, this class was a bit messy and really big.
-     * We were frequently getting merge conflicts and things were breaking quite alot. By
-     * separating out each of the website's navigation sections and PageProcessing handlers
-     * we can isolate the code better and garden-wall off things that shouldn't be affected
-     * by other changes in the code base.
-     *
      * @author Adam Nicholls <adam@goramandvincent.com>
      * @since 2014/01/17
      * @access public
