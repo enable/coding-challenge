@@ -34,7 +34,7 @@ class clsSiteController_videos extends clsController
 
         $arrFields = array("Title","Speaker","PublicationDate");
         $arrWhere = array();
-        $arrOrder = array();
+        $arrOrder = array('Speaker'=>'DESC');
 
         $arrVideos = $arrVar['objDb']->funCoreFetch("fetchVideos",$arrTable,$arrFields,$arrWhere,$arrOrder);
 

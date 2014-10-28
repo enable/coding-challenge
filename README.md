@@ -87,4 +87,7 @@ Use your own judgement and add more Video data from the database to the HTML tab
 # Task 2 #
 
 Create a new Video Gallery page that displays 5 of the most recent video's thumbnails.
-To do this you will need to look at the _clsImage_ class to fetch video images and create thumbnails.
+
+To do this you will need to use the _siteVideoToImage_ link table, this database query is already coded for you.
+
+To create the thumbnail you'll need to look at the _clsImage_ class. You should use the _funFetch_ method.
