@@ -91,3 +91,15 @@ Create a new Video Gallery page that displays 5 of the most recent video's thumb
 To do this you will need to use the _siteVideoToImage_ link table, this database query is already coded for you.
 
 To create the thumbnail you'll need to look at the _clsImage_ class. You should use the _funFetch_ method.
+
+
+
+# Delivery #
+
+We don't mind how we get your code...
+
+
+* If you forked this repository you can send in a _pull-request_ on github.
+* If we've sent you this challenge as a Zip file or directly:
+  * you can send it back to us as a Zip via email.
+  * you can send us a dropbox link.

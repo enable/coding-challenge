@@ -13,6 +13,9 @@
                 <li>
                     <a href="/videos">Videos</a>
                 </li>
+                <li>
+                    <a href="/videos/gallery">Video Gallery</a>
+                </li>
             </ul>
         </nav>
         <div class="container">
