@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+).php$ includes/core/virtual.php [L]
+
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_FILENAME}index.php !-f
+RewriteRule ^$ includes/core/virtual.php [L]
+
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ includes/core/virtual.php [L]

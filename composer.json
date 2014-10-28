@@ -1,0 +1,14 @@
+{
+    "name": "goramandvincent/ecancer-challenge",
+    "description": "ecancer coding challenege",
+    "require": {
+        "robmorgan/phinx": "~0.3",
+        "monolog/monolog": "~1.11"
+    },
+    "authors": [
+        {
+            "name": "Adam Nicholls",
+            "email": "adam@goramandvincent.com"
+        }
+    ]
+}
