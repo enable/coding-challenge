@@ -103,3 +103,5 @@ We don't mind how we get your code...
 * If we've sent you this challenge as a Zip file or directly:
   * you can send it back to us as a Zip via email.
   * you can send us a dropbox link.
+
+__If emailing your code please email technical@goramandvincent.com.__
