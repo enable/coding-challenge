@@ -1,5 +1,7 @@
 RewriteEngine On
 
+RewriteRule ^/images/(.+).jpg$ images/$1.jpg [L]
+
 RewriteCond %{HTTPS} =off
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

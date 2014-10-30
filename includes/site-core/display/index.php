@@ -23,7 +23,6 @@
 <h2><a name="setting-up">Setting up</a></h2>
 
 To setup this code base you will need to:
-
 <ol>
     <li>Checkout the <a href="https://github.com/enable/coding-challenge/tree/develop">develop</a> branch</li>
     <li>Install the <a href="http://getcomposer.org">composer</a> dependencies</li>
@@ -53,12 +52,25 @@ To setup this code base you will need to:
         Run the migrations
         <ul>
             <li>we use <a href="http://docs.phinx.org/en/latest/commands.html#the-migrate-command">phinx</a> to keep our databases in-sync</li>
+            <li>phinx command should be: <em>vendor/bin/phinx migrate -e development</em></li>
         </ul>
     </li>
     <li>
         Setup a virtual host in Apache or MAMP/XAMPP
         <ul>
             <li>you will need <em>AllowOverride All</em> on to allow our <a href="http://httpd.apache.org/docs/2.2/howto/htaccess.html">.htaccess</a> rules to take effect</li>
+            <li>you will also need Mod Rewrite enabled in Apache.</li>
+            <li>Virtual Host configuration should be:<br>
+<pre>
+&lt;VirtualHost *:80&gt;
+  ServerName gv_challenge.local
+  DocumentRoot /SomeWhere/OnYourLaptopOrPc
+  &lt;Directory /SomeWhere/OnYourLaptopOrPc&gt;
+    AllowOverride All
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</pre>
+            </li>
         </ul>
     </li>
     <li>
@@ -72,8 +84,8 @@ To setup this code base you will need to:
                 </ul>
             </li>
             <li>On Windows system - C:\Windows\system32\etc\drivers\hosts</li>
+            <li>There is a <em><a href="http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file">Guide</a></em> here.</li>
         </ul>
-        <em><a href="http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file">Guide</a></em>
     </li>
 </ol>
 
@@ -165,5 +177,3 @@ custom error handler by setting <em>Debug = 0</em> in <em>site/ini/debug.ini</em
 <p>To do this you will need to use the <em>siteVideoToImage</em> link table, this database query is already coded for you.</p>
 
 <p>To create the thumbnail you'll need to look at the <em>clsImage</em> class. You should use the <em>funFetch</em> method.</p>
-
-
